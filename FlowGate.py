@@ -1,19 +1,16 @@
 import socket
 import threading
 
-""" 
-/$$$$$$$                                        
-| $$__  $$                                       
-| $$  \ $$ /$$$$$$   /$$$$$$  /$$   /$$ /$$   /$$
-| $$$$$$$//$$__  $$ /$$__  $$|  $$ /$$/| $$  | $$
-| $$____/| $$  \__/| $$  \ $$ \  $$$$/ | $$  | $$
-| $$     | $$      | $$  | $$  >$$  $$ | $$  | $$
-| $$     | $$      |  $$$$$$/ /$$/\  $$|  $$$$$$$
-|__/     |__/       \______/ |__/  \__/ \____  $$
-                                        /$$  | $$
-                                       |  $$$$$$/
-                                        \______/ 
-"""
+ART = """ \033[94m
+▄████  █    ████▄   ▄ ▄     ▄▀  ██     ▄▄▄▄▀ ▄███▄   
+█▀   ▀ █    █   █  █   █  ▄▀    █ █ ▀▀▀ █    █▀   ▀  
+█▀▀    █    █   █ █ ▄   █ █ ▀▄  █▄▄█    █    ██▄▄    
+█      ███▄ ▀████ █  █  █ █   █ █  █   █     █▄   ▄▀ 
+ █         ▀       █ █ █   ███     █  ▀      ▀███▀   
+  ▀                 ▀ ▀           █                  
+                                 ▀                   
+\033[0m"""
+COLOR = {"RED" : "[\033[91m-\033[0m]","GREEN" : "[\033[92m+\033[0m]","YELLOW" : "[\033[93mx\033[0m]"}
 
 class TCPProxy:
     """Classe principal que gerencia a criação e execução do proxy TCP."""
@@ -29,7 +26,7 @@ class TCPProxy:
         with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as server:
             server.bind((self.local_host, self.local_port))
             server.listen(5)
-            print(f"[*] Proxy escutando em {self.local_host}:{self.local_port} "
+            print(f"{COLOR["GREEN"]} Proxy escutando em {self.local_host}:{self.local_port} "
                   f"e redirecionando para {self.remote_host}:{self.remote_port}")
 
             while True:
@@ -92,6 +89,7 @@ class TrafficForwarder(threading.Thread):
 
 
 if __name__ == "__main__":
+    print(ART)
     # Parâmetros de configuração do Proxy
     LOCAL_HOST = "127.0.0.1"
     LOCAL_PORT = 9999
