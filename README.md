@@ -1,71 +1,71 @@
 # FlowGate
 
-FlowGate is a TCP Proxy tool designed for monitoring, intercepting, and manipulating network traffic. The proxy acts as a middleman between a client and a server, providing real-time analysis and modification capabilities. Built for developers, cybersecurity enthusiasts, and penetration testers, FlowGate offers a flexible platform for traffic inspection and debugging.
+FlowGate é uma ferramenta de Proxy TCP projetada para monitorar, interceptar e manipular o tráfego de rede. O proxy atua como um intermediário entre um cliente e um servidor, fornecendo capacidades de análise e modificação em tempo real. Desenvolvido para desenvolvedores, entusiastas de segurança cibernética e testadores de penetração, o FlowGate oferece uma plataforma flexível para inspeção e depuração de tráfego.
 
-## Table of Contents
+## Índice
 
-- [Features](#features)
-- [Installation](#installation)
-- [Usage](#usage)
-- [Examples](#examples)
-- [Contributing](#contributing)
-- [License](#license)
+- [Funcionalidades](#funcionalidades)
+- [Instalação](#instalação)
+- [Uso](#uso)
+- [Exemplos](#exemplos)
+- [Contribuindo](#contribuindo)
+- [Licença](#licença)
 
-## Features
+## Funcionalidades
 
-- **Traffic Redirection**: Redirects TCP traffic between clients and servers.
-- **Live Traffic Monitoring**: Real-time display of bytes transmitted.
-- **Data Interception**: Capture, log, and modify data on-the-fly.
-- **Multi-Threaded Architecture**: Handles multiple client connections simultaneously.
-- **Customizable Configuration**: Easily configurable to match your needs.
+- **Redirecionamento de Tráfego**: Redireciona o tráfego TCP entre clientes e servidores.
+- **Monitoramento de Tráfego em Tempo Real**: Exibição em tempo real dos bytes transmitidos.
+- **Interceptação de Dados**: Captura, registra e modifica dados em tempo real.
+- **Arquitetura Multithreaded**: Lida com várias conexões de clientes simultaneamente.
+- **Configuração Personalizável**: Facilmente configurável para atender às suas necessidades.
 
-## Installation
+## Instalação
 
-To run FlowGate, make sure you have Python 3.8 or higher installed. You can install the necessary dependencies with the following command:
+Para executar o FlowGate, certifique-se de ter o Python 3.8 ou superior instalado. Você pode instalar as dependências necessárias com o seguinte comando:
 
 ```bash
 pip install -r requirements.txt
 ```
 
-## Usage
+## Uso
 
-Launch the proxy by specifying the local and remote hosts and ports. You can run FlowGate using the following command:
-
-```bash
-python flowgate.py --local-host 127.0.0.1 --local-port 9999 --remote-host www.example.com --remote-port 80
-```
-
-### Command-Line Options
-
-- `--local-host`: Specifies the local IP address to bind the proxy.
-- `--local-port`: Sets the local port to listen for incoming connections.
-- `--remote-host`: Target server to forward the traffic.
-- `--remote-port`: Port of the target server.
-
-## Examples
-
-### Basic Proxy Usage
+Inicie o proxy especificando os hosts e portas locais e remotos. Você pode executar o FlowGate usando o seguinte comando:
 
 ```bash
 python flowgate.py --local-host 127.0.0.1 --local-port 9999 --remote-host www.example.com --remote-port 80
 ```
 
-In the above example, FlowGate intercepts traffic at `127.0.0.1:9999` and forwards it to `www.example.com:80`. You can configure your web browser or any application to use `127.0.0.1:9999` as a proxy to see the traffic.
+### Opções de Linha de Comando
 
-### Advanced Configuration
+- `--local-host`: Especifica o endereço IP local para vincular o proxy.
+- `--local-port`: Define a porta local para escutar conexões de entrada.
+- `--remote-host`: Servidor de destino para encaminhar o tráfego.
+- `--remote-port`: Porta do servidor de destino.
 
-You can customize FlowGate to modify packets before they reach the destination server. Example coming soon!
+## Exemplos
 
-## Contributing
+### Uso Básico do Proxy
 
-We welcome contributions! Please check the [issues](https://github.com/your-repo/FlowGate/issues) section for ideas or open a new issue to discuss your ideas. To contribute:
+```bash
+python flowgate.py --local-host 127.0.0.1 --local-port 9999 --remote-host www.example.com --remote-port 80
+```
 
-1. Fork the repository.
-2. Create a new branch for your feature: `git checkout -b feature-name`.
-3. Commit your changes: `git commit -m 'Add some feature'`.
-4. Push to the branch: `git push origin feature-name`.
-5. Open a pull request.
+No exemplo acima, o FlowGate intercepta o tráfego em `127.0.0.1:9999` e o redireciona para `www.example.com:80`. Você pode configurar seu navegador ou qualquer aplicação para usar `127.0.0.1:9999` como proxy para visualizar o tráfego.
 
-## License
+### Configuração Avançada
 
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+Você pode personalizar o FlowGate para modificar pacotes antes que eles cheguem ao servidor de destino. Exemplo em breve!
+
+## Contribuindo
+
+Contribuições são bem-vindas! Verifique a seção de [issues](https://github.com/seu-repo/FlowGate/issues) para ideias ou abra um novo issue para discutir suas propostas. Para contribuir:
+
+1. Faça um fork do repositório.
+2. Crie um novo branch para sua funcionalidade: `git checkout -b nome-da-funcionalidade`.
+3. Faça o commit das suas alterações: `git commit -m 'Adiciona nova funcionalidade'`.
+4. Envie para o branch: `git push origin nome-da-funcionalidade`.
+5. Abra um pull request.
+
+## Licença
+
+Este projeto é licenciado sob a Licença MIT - consulte o arquivo [LICENSE](LICENSE) para mais detalhes.
