@@ -1,6 +1,6 @@
-# FlowGate
+# FlowProxy
 
-FlowGate é uma ferramenta de Proxy TCP projetada para monitorar, interceptar e manipular o tráfego de rede. O proxy atua como um intermediário entre um cliente e um servidor, fornecendo capacidades de análise e modificação em tempo real. Desenvolvido para desenvolvedores, entusiastas de segurança cibernética e testadores de penetração, o FlowGate oferece uma plataforma flexível para inspeção e depuração de tráfego.
+FlowProxy é uma ferramenta de Proxy TCP projetada para monitorar, interceptar e manipular o tráfego de rede. O proxy atua como um intermediário entre um cliente e um servidor, fornecendo capacidades de análise e modificação em tempo real. Desenvolvido para desenvolvedores, entusiastas de segurança cibernética e testadores de penetração, o FlowGate oferece uma plataforma flexível para inspeção e depuração de tráfego.
 
 ## Índice
 
@@ -21,7 +21,7 @@ FlowGate é uma ferramenta de Proxy TCP projetada para monitorar, interceptar e 
 
 ## Instalação
 
-Para executar o FlowGate, certifique-se de ter o Python 3.8 ou superior instalado. Você pode instalar as dependências necessárias com o seguinte comando:
+Para executar o FlowProxy, certifique-se de ter o Python 3.8 ou superior instalado. Você pode instalar as dependências necessárias com o seguinte comando:
 
 ```bash
 pip install -r requirements.txt
@@ -29,7 +29,7 @@ pip install -r requirements.txt
 
 ## Uso
 
-Inicie o proxy especificando os hosts e portas locais e remotos. Você pode executar o FlowGate usando o seguinte comando:
+Inicie o proxy especificando os hosts e portas locais e remotos. Você pode executar o FlowProxy usando o seguinte comando:
 
 ```bash
 python flowgate.py --local-host 127.0.0.1 --local-port 9999 --remote-host www.example.com --remote-port 80
@@ -50,7 +50,7 @@ python flowgate.py --local-host 127.0.0.1 --local-port 9999 --remote-host www.ex
 python flowgate.py --local-host 127.0.0.1 --local-port 9999 --remote-host www.example.com --remote-port 80
 ```
 
-No exemplo acima, o FlowGate intercepta o tráfego em `127.0.0.1:9999` e o redireciona para `www.example.com:80`. Você pode configurar seu navegador ou qualquer aplicação para usar `127.0.0.1:9999` como proxy para visualizar o tráfego.
+No exemplo acima, o FlowProxy intercepta o tráfego em `127.0.0.1:9999` e o redireciona para `www.example.com:80`. Você pode configurar seu navegador ou qualquer aplicação para usar `127.0.0.1:9999` como proxy para visualizar o tráfego.
 
 ### Configuração Avançada
 
